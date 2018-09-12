@@ -1,18 +1,18 @@
 package com.java.lab2;
 
-public class Person_3 {
+public class Lab2_5 {
 	private String firstName;
 	private String lastName;
 	private int number;
 	private Gender gender;
 	
 	// Default constructor
-	public Person_3() {
+	public Lab2_5() {
 		super();
 	}
 	
 	// Parameterized constructor
-	public Person_3(String firstName, String lastName, int number, Gender gender) {
+	public Lab2_5(String firstName, String lastName, int number, Gender gender) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.number = number;

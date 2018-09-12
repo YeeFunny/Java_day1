@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class Lab3_5 {
 	
-	public static String expiryDate(Date date, int year,int month){
+	public static String expiryDate(Date date, int year, int month){
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(date);
@@ -23,7 +23,7 @@ public class Lab3_5 {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		try {
 			Date date = dateFormat.parse(dateStr);
-			System.out.println(Lab3_5.expiryDate(date, 1, 1));
+			System.out.println("The expiry date is: " + expiryDate(date, 1, 1));
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

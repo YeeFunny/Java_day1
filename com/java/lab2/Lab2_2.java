@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Lab2_2 {
 	
 	public static void main(String[] args) {
+		System.out.println("Please input a number:");
 		Scanner scan = new Scanner(System.in);
 		while(scan.hasNext()) {
 			try	{

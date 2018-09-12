@@ -1,6 +1,6 @@
 package com.java.lab2;
 
-public class Person_1 {
+public class Lab2_4 {
 	
 	private String firstName;
 	private String lastName;
@@ -8,12 +8,12 @@ public class Person_1 {
 	private char gender;
 	
 	// Default constructor
-	public Person_1() {
+	public Lab2_4() {
 		super();
 	}
 	
 	// Parameterized constructor
-	public Person_1(String firstName, String lastName, int number, char gender) {
+	public Lab2_4(String firstName, String lastName, int number, char gender) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.number = number;

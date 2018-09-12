@@ -3,12 +3,13 @@ package com.java.lab3;
 public class Lab3_1 {
 
 	public static String strOperation(String str, Option option) {
+		StringBuilder sb = null;
 		if (str != null) {
 			if (option == Option.Add) {
 				str += str;
 			}
 			if (option == Option.Replace) {
-				StringBuilder sb = new StringBuilder();
+				sb = new StringBuilder();
 				for (int i = 0; i < str.length(); i++) {
 					char curChar = str.charAt(i);
 					if (i % 2 != 0) {
@@ -29,7 +30,7 @@ public class Lab3_1 {
 		        str = target;
 			}
 			if (option == Option.Change) {
-				StringBuilder sb = new StringBuilder();
+				sb = new StringBuilder();
 				for (int i = 0; i < str.length(); i++) {
 					char curChar = str.charAt(i);
 					if (i % 2 != 0) {

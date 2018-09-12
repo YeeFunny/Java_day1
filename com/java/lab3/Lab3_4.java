@@ -11,6 +11,6 @@ public class Lab3_4 {
 	}
 	
 	public static void main(String[] args) {
-		Lab3_4.printDuration(LocalDate.of(2012, 2, 12), LocalDate.of(2014, 11, 3));
+		printDuration(LocalDate.of(2013, 10, 31), LocalDate.of(2014, 11, 3));
 	}
 }
