@@ -26,14 +26,14 @@ public class Lab3_3 {
         }
 
         if (increment != 0) {
-            day = (end.get(Calendar.DAY_OF_MONTH) + increment) - start.get(Calendar.DAY_OF_MONTH);
+            day = end.get(Calendar.DAY_OF_MONTH) + (increment - start.get(Calendar.DAY_OF_MONTH));
             increment = 1;
         } else {
             day = end.get(Calendar.DAY_OF_MONTH) - start.get(Calendar.DAY_OF_MONTH);
         }
 
         if ((start.get(Calendar.MONTH) + increment) > end.get(Calendar.MONTH)) {
-            month = (end.get(Calendar.MONTH) + 12) - (start.get(Calendar.MONTH) + increment);
+            month = end.get(Calendar.MONTH) + 12 - (start.get(Calendar.MONTH) + increment);
             increment = 1;
         } else {
             month = (end.get(Calendar.MONTH)) - (start.get(Calendar.MONTH) + increment);
@@ -45,7 +45,7 @@ public class Lab3_3 {
 	}
 	
 	public static void main(String[] args) {
-		String dateStr = "2018-9-12";
+		String dateStr = "2017-8-1";
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		try {
 			Date date = dateFormat.parse(dateStr);

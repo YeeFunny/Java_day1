@@ -2,12 +2,16 @@ package com.java.lab4;
 
 public class SavingAccount extends Account{
 
-	private final long miniBalance = 500l;
+	private final double miniBalance = 500.0;
 
 	@Override
-	public void withdrow(double amount) {
+	public boolean withdrow(double amount) {
 		// TODO Auto-generated method stub
-		if (this.getBalance() - amount >= miniBalance)
-			super.withdrow(amount);
+		double left = getBalance() - amount;
+		if (left >= miniBalance) {
+			setBalance(left);
+			return true;
+		}
+		return false;
 	}
 }

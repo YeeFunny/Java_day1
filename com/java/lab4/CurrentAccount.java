@@ -2,12 +2,15 @@ package com.java.lab4;
 
 public class CurrentAccount extends Account{
 
-	private final long overdraft = 500l;
+	private final double overdraft = -500.0;
 
 	@Override
-	public void withdrow(double amount) {
-		// TODO Auto-generated method stub
-		double newBalance = this.getBalance() - amount;
-		if (newBalance >= 0 || (newBalance < 0 && -newBalance < overdraft)) super.withdrow(amount);
+	public boolean withdrow(double amount) {
+		double newBalance = getBalance() - amount;
+		if (newBalance > overdraft) {
+			setBalance(newBalance);
+			return true;
+		}
+		return false;
 	}
 }

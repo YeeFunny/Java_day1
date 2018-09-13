@@ -5,6 +5,11 @@ public class Person {
 	private String name;
 	private float age;
 	
+	@Override
+	public String toString() {
+		return "Person [name=" + name + ", age=" + age + "]";
+	}
+	
 	public Person(String name) {
 		this.name = name;
 	}

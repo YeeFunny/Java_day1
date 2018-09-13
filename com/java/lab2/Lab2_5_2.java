@@ -1,25 +1,32 @@
 package com.java.lab2;
 
-public class Person_2 {
+public class Lab2_5_2 {
 	private String firstName;
 	private String lastName;
 	private int number;
-	private char gender;
+	private Gender gender;
 	
 	// Default constructor
-	public Person_2() {
+	public Lab2_5_2() {
 		super();
 	}
 	
 	// Parameterized constructor
-	public Person_2(String firstName, String lastName, int number, char gender) {
+	public Lab2_5_2(String firstName, String lastName, int number, Gender gender) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.number = number;
-		if (gender == 'M' || gender == 'F')
-			this.gender = gender;
+		this.gender = gender;
 	}
 	
+	public Gender getGender() {
+		return gender;
+	}
+
+	public void setGender(Gender gender) {
+		this.gender = gender;
+	}
+
 	public int getNumber() {
 		return number;
 	}
@@ -39,15 +46,6 @@ public class Person_2 {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public char getGender() {
-		return gender;
-	}
-	public void setGender(char gender) {
-		if (gender == 'M' || gender == 'F')
-			this.gender = gender;
-		else
-			System.out.println("Gender input is invalid!");
-	}
 	public void printDetails() {
 		System.out.println("Person Details:");
 		System.out.println("---------------");
@@ -57,3 +55,7 @@ public class Person_2 {
 		System.out.println("Gender: " + this.gender);
 	}
 }
+
+enum Gender {
+	M, F
+};

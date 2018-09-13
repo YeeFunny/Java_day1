@@ -7,10 +7,7 @@ public class EmployeeService implements EmployeeServiceIF{
 	@Override
 	public Employee setEmloyee(String name, String designation, long salary) {
 		// TODO Auto-generated method stub
-		Employee employee = new Employee();
-		employee.setName(name);
-		employee.setDesignation(designation);
-		employee.setSalary(salary);
+		Employee employee = new Employee(name, salary, designation);
 		return employee;
 	}
 

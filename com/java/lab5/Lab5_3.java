@@ -15,7 +15,9 @@ public abstract class Lab5_3 {
 	public void deposit(double amount) {
 		this.balance += amount;
 	}
+	
 	abstract void withdrow(double amount);
+	
 	public long getAccNum() {
 		return accNum;
 	}

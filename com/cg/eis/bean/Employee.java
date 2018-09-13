@@ -8,8 +8,11 @@ public class Employee {
 	private char insuranceScheme;
 	private static long noOfEmployee;
 	
-	public Employee() {
+	public Employee(String name, long salary, String designation) {
 		this.id = ++noOfEmployee;
+		this.name = name;
+		this.salary = salary;
+		this.designation = designation;
 	}
 		
 	public long getId() {

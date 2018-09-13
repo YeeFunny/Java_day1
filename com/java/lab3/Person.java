@@ -41,28 +41,27 @@ public class Person {
 	
 	public int calculateAge(Date birthDay) {
 		Calendar cal = Calendar.getInstance();  
-        if (cal.before(birthDay)) {  
-            System.out.println("The birthday is invalid!"); 
-        }  
-        int yearNow = cal.get(Calendar.YEAR);  
-        int monthNow = cal.get(Calendar.MONTH);  
-        int dayOfMonthNow = cal.get(Calendar.DAY_OF_MONTH);  
-        cal.setTime(birthDay);  
-  
-        int yearBirth = cal.get(Calendar.YEAR);  
-        int monthBirth = cal.get(Calendar.MONTH);  
-        int dayOfMonthBirth = cal.get(Calendar.DAY_OF_MONTH);  
-  
-        int age = yearNow - yearBirth;  
-  
-        if (monthNow <= monthBirth) {  
-            if (monthNow == monthBirth) {  
-                if (dayOfMonthNow < dayOfMonthBirth) age--;  
-            }else{  
-                age--;  
-            }  
-        }  
-        return age;  
+		if (cal.before(birthDay)) {
+			System.out.println("The birthday is invalid!"); 
+		}
+		int yearNow = cal.get(Calendar.YEAR);
+		int monthNow = cal.get(Calendar.MONTH);
+		int dayOfMonthNow = cal.get(Calendar.DAY_OF_MONTH);  
+        
+		cal.setTime(birthDay);
+		int yearBirth = cal.get(Calendar.YEAR);
+		int monthBirth = cal.get(Calendar.MONTH);
+		int dayOfMonthBirth = cal.get(Calendar.DAY_OF_MONTH);
+		
+		int age = yearNow - yearBirth;
+		if (monthNow <= monthBirth) {
+			if (monthNow == monthBirth) {
+				if (dayOfMonthNow < dayOfMonthBirth) age--;
+			}else{
+				age--;
+			}
+		}
+		return age;  
 	}
 	
 	public String getFullName() {

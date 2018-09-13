@@ -19,7 +19,7 @@ public class Lab3_5 {
 	}
 	
 	public static void main(String[] args) {
-		String dateStr = "2010-2-12";
+		String dateStr = "2010-12-12";
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		try {
 			Date date = dateFormat.parse(dateStr);
