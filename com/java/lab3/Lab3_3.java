@@ -11,6 +11,7 @@ public class Lab3_3 {
 		Date now = new Date();
 		Calendar start = Calendar.getInstance();
         Calendar end = Calendar.getInstance();
+        
 		if (date.after(now)) {
 			start.setTime(now);
 			end.setTime(date);
